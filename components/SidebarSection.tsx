@@ -38,7 +38,7 @@ export function SidebarSection() {
       </p>
       <p>
         Press a file for instant actions: open it in your editor of choice, copy
-        its path, or inspect visual diff previews in a split pane — without ever leaving home row.
+        its path, or inspect read-only diff previews in an overlay — without ever leaving home row.
       </p>
     </Spotlight>
   );
