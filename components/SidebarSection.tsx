@@ -25,6 +25,7 @@ export function SidebarSection() {
           alt="AndSpace file actions menu: open package.json in Cursor, VS Code, a Neovim split, copy path, or reveal in Finder"
           width={2047}
           height={1283}
+          priority
           glow="md"
           sizes="(max-width: 1280px) 100vw, 640px"
         />

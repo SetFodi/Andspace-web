@@ -49,6 +49,7 @@ export function KeyboardSection() {
           alt="AndSpace keyboard shortcut cheatsheet grouped into Tabs & Panes, Sidebar & Files, AI & Workflows, and General"
           width={1672}
           height={941}
+          priority
           glow="lg"
           sizes="(max-width: 1280px) 100vw, 1280px"
         />

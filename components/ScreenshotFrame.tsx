@@ -57,7 +57,7 @@ export function ScreenshotFrame({
           {scrim ? (
             <div
               aria-hidden
-              className="absolute inset-0 bg-ink-950/55 backdrop-blur-[2px]"
+              className="absolute inset-0 bg-ink-950/60"
             />
           ) : null}
 

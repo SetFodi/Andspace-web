@@ -23,14 +23,14 @@ function Bento({
   return (
     <div
       className={cn(
-        "group relative rounded-[20px] bg-gradient-to-b from-white/[0.09] to-white/[0.015] p-px transition-all duration-300 hover:from-violet/40 hover:to-white/[0.04]",
+        "relative rounded-[20px] bg-gradient-to-b from-white/[0.09] to-white/[0.015] p-px",
         className
       )}
     >
       <div className="relative flex h-full flex-col overflow-hidden rounded-[19px] bg-gradient-to-b from-ink-800 to-ink-850">
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(167,139,250,0.14)_0%,transparent_72%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(167,139,250,0.14)_0%,transparent_72%)] opacity-0"
         />
         {children}
       </div>
@@ -49,7 +49,7 @@ function Head({
 }) {
   return (
     <div>
-      <div className="mb-3.5 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-violet/25 bg-gradient-to-b from-violet/[0.16] to-violet/[0.04] text-violet-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] transition-transform duration-300 group-hover:scale-105">
+      <div className="mb-3.5 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-violet/25 bg-gradient-to-b from-violet/[0.16] to-violet/[0.04] text-violet-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]">
         {icon}
       </div>
       <h3 className="text-[15.5px] font-semibold tracking-tight text-fg">

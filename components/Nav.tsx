@@ -31,7 +31,7 @@ export function Wordmark() {
 export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="border-b border-line-soft bg-ink-900/70 backdrop-blur-xl">
+      <div className="border-b border-line-soft bg-ink-900/92">
         <nav className="mx-auto flex h-16 w-full max-w-page items-center justify-between px-6 lg:px-8">
           <div className="flex items-center gap-8">
             <Wordmark />

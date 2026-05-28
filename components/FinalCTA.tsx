@@ -50,7 +50,7 @@ export function FinalCTA() {
             </div>
 
             {/* Spec limits, installation guardrails, and Checksum accordion */}
-            <details className="mx-auto mt-8 max-w-lg rounded-xl border border-white/10 bg-white/[0.015] p-4 text-left font-sans text-[13px] backdrop-blur-sm transition-all duration-300 open:border-violet/30 [&_summary]:cursor-pointer">
+            <details className="mx-auto mt-8 max-w-lg rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left font-sans text-[13px] transition-all duration-300 open:border-violet/30 [&_summary]:cursor-pointer">
               <summary className="font-semibold text-fg-muted hover:text-fg select-none outline-none">
                 Release specifications & limitations
               </summary>
