@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0c;
+  color: #e6e6ea;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#site-scroll {
+  padding-top: 4rem;
+  overflow-x: hidden;
+}
+
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      700px 500px at 12% 42%,
+      rgba(124, 58, 237, 0.07),
+      transparent 60%
+    ),
+    radial-gradient(
+      700px 500px at 88% 70%,
+      rgba(99, 102, 241, 0.06),
+      transparent 60%
+    );
+}
+
+.page-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
+  background-size: 34px 34px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 8%,
+    #000 30%,
+    transparent 80%
+  );
+  mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 8%,
+    #000 30%,
+    transparent 80%
+  );
+}
+
+.page-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("/grain.png");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+@layer components {
+  .glow-violet-sm {
+    background: radial-gradient(
+      ellipse 70% 55% at 50% 28%,
+      rgba(124, 58, 237, 0.14) 0%,
+      rgba(124, 58, 237, 0.06) 42%,
+      transparent 72%
+    );
+  }
+
+  .glow-violet-md {
+    background: radial-gradient(
+      ellipse 72% 58% at 50% 26%,
+      rgba(124, 58, 237, 0.17) 0%,
+      rgba(124, 58, 237, 0.07) 44%,
+      transparent 74%
+    );
+  }
+
+  .glow-violet-lg {
+    background: radial-gradient(
+      ellipse 78% 62% at 50% 24%,
+      rgba(124, 58, 237, 0.2) 0%,
+      rgba(124, 58, 237, 0.08) 46%,
+      transparent 76%
+    );
+  }
+
+  .glow-violet-frame-md {
+    background: radial-gradient(
+      ellipse 72% 58% at 50% 12%,
+      rgba(124, 58, 237, 0.19) 0%,
+      rgba(124, 58, 237, 0.08) 44%,
+      transparent 74%
+    );
+  }
+
+  .glow-violet-frame-lg {
+    background: radial-gradient(
+      ellipse 78% 62% at 50% 10%,
+      rgba(124, 58, 237, 0.22) 0%,
+      rgba(124, 58, 237, 0.09) 46%,
+      transparent 76%
+    );
+  }
+
+  .glow-floor {
+    background: radial-gradient(
+      ellipse 100% 100% at 50% 50%,
+      rgba(124, 58, 237, 0.2) 0%,
+      transparent 72%
+    );
+  }
+
+  .glow-panel-tr {
+    background: radial-gradient(
+      ellipse 90% 80% at 72% 28%,
+      rgba(124, 58, 237, 0.18) 0%,
+      transparent 68%
+    );
+  }
+
+  .glow-panel-bl {
+    background: radial-gradient(
+      ellipse 90% 80% at 28% 72%,
+      rgba(124, 58, 237, 0.18) 0%,
+      transparent 68%
+    );
+  }
+
+  .glow-cta {
+    background: radial-gradient(
+      ellipse 70% 60% at 50% 40%,
+      rgba(124, 58, 237, 0.22) 0%,
+      rgba(124, 58, 237, 0.08) 48%,
+      transparent 78%
+    );
+  }
+}
+
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.text-gradient-violet {
+  background: linear-gradient(180deg, #c4b5fd 0%, #a78bfa 45%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-violet-sheen {
+  background-image: linear-gradient(
+    100deg,
+    #7c3aed 0%,
+    #a78bfa 30%,
+    #ede9fe 50%,
+    #a78bfa 70%,
+    #7c3aed 100%
+  );
+  background-size: 220% 100%;
+  background-position: 90% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hero-sheen 7s ease-in-out infinite;
+}
+@keyframes hero-sheen {
+  0%,
+  100% {
+    background-position: 90% 0;
+  }
+  50% {
+    background-position: 0% 0;
+  }
+}
+
+.animate-caret {
+  animation: caret-blink 1.05s steps(1) infinite;
+}
+@keyframes caret-blink {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  50%,
+  94% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
