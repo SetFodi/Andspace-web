@@ -27,7 +27,7 @@ export function FinalCTA() {
 
             <div className="mt-9">
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.2" size="lg">
+                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.3" size="lg">
                   <AppleIcon className="h-4 w-4" />
                   Download for macOS
                 </Button>
@@ -37,7 +37,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-                AndSpace v0.1.0-alpha.2 is now available for macOS.
+                AndSpace v0.1.0-alpha.3 is now available for macOS.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ export function FinalCTA() {
                 <LockIcon className="h-3.5 w-3.5" /> Runs entirely on your machine
               </span>
               <span>macOS 13+ · Apple Silicon</span>
-              <span>v0.1.0-alpha.2</span>
+              <span>v0.1.0-alpha.3</span>
             </div>
 
             {/* Spec limits, installation guardrails, and Checksum accordion */}
@@ -68,9 +68,11 @@ export function FinalCTA() {
                   <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. To guarantee safety, AndSpace has no Git write actions, no built-in editor (code editing remains in your local IDE), and no embedded browser previews.
                 </div>
                 <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
-                  <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksum:</strong>
+                  <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
                   <br />
-                  e6d2c7fe0357e2e9e04fcf3ef9128dd6e8dd57b6bf0c43dac8e9cac4907d5526
+                  ZIP: 2b12be781dbc85dbc80527ffba2110d9f2c804588c782158acc95e631a896e3a
+                  <br />
+                  DMG: c95fa512a686b68961ad04594ad44bd8c7743f7117967cc60843c73a26c4d43d
                 </div>
               </div>
             </details>
