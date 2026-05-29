@@ -70,9 +70,9 @@ export function FinalCTA() {
                 <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
                   <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
                   <br />
-                  ZIP: 2b12be781dbc85dbc80527ffba2110d9f2c804588c782158acc95e631a896e3a
+                  ZIP: 30ee2906e5a5c9891e1a90133aeb6799e323fad5ab99d8104f7e1ac2737da333
                   <br />
-                  DMG: c95fa512a686b68961ad04594ad44bd8c7743f7117967cc60843c73a26c4d43d
+                  DMG: 4eb5f491c771a235c03607efa8d62e7739e5133d5a4fbf6588fcb0ee945670e2
                 </div>
               </div>
             </details>
