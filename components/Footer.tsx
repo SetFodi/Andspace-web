@@ -6,26 +6,28 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Product",
     links: [
-      { label: "Features", href: "#features" },
-      { label: "Command Guard", href: "#command-guard" },
-      { label: "AI Handoff", href: "#ai-handoff" },
-      { label: "Download", href: "#download" },
+      { label: "Features", href: "/#features" },
+      { label: "Command Guard", href: "/#command-guard" },
+      { label: "AI Handoff", href: "/#ai-handoff" },
+      { label: "Download", href: "/#download" },
     ],
   },
   {
     title: "Resources",
     links: [
+      { label: "Release", href: "https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5" },
       { label: "Changelog", href: "https://github.com/SetFodi/Andspace/releases" },
       { label: "Documentation", href: "https://github.com/SetFodi/Andspace#readme" },
-      { label: "Keyboard shortcuts", href: "#keyboard" },
+      { label: "Keyboard shortcuts", href: "/#keyboard" },
       { label: "GitHub", href: "https://github.com/SetFodi/Andspace" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#features" },
-      { label: "Privacy", href: "#download" },
+      { label: "About", href: "/#features" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Security", href: "/security" },
       { label: "Contact", href: "https://github.com/SetFodi/Andspace/issues" },
     ],
   },
@@ -71,6 +73,12 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4 text-[12.5px] text-fg-faint">
             <span>Made for macOS</span>
+            <Link href="/privacy" className="transition-colors hover:text-fg-muted">
+              Privacy
+            </Link>
+            <Link href="/security" className="transition-colors hover:text-fg-muted">
+              Security
+            </Link>
             <Link
               href="https://github.com/SetFodi/Andspace"
               className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-fg-muted transition-colors hover:bg-white/[0.05] hover:text-fg"

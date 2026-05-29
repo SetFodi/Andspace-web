@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Section, Button } from "./ui";
 import { Reveal } from "./Reveal";
 import { AppleIcon, GithubIcon, LockIcon } from "./icons";
@@ -49,23 +50,23 @@ export function FinalCTA() {
               <span>v0.1.0-alpha.5</span>
             </div>
 
-            {/* Spec limits, installation guardrails, and Checksum accordion */}
+            {/* Spec limits, installation guardrails, and checksum accordion */}
             <details className="mx-auto mt-8 max-w-lg rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left font-sans text-[13px] transition-all duration-300 open:border-violet/30 [&_summary]:cursor-pointer">
               <summary className="font-semibold text-fg-muted hover:text-fg select-none outline-none">
                 Release specifications & limitations
               </summary>
               <div className="mt-3 space-y-2.5 text-fg-faint leading-relaxed border-t border-white/[0.06] pt-3">
                 <div>
-                  <strong className="text-fg-muted">Platform Focus:</strong> Early alpha build. macOS first (Apple Silicon), optimized for zsh.
+                  <strong className="text-fg-muted">Platform Focus:</strong> Early alpha build. macOS first, Apple Silicon focused, optimized for zsh.
                 </div>
                 <div>
                   <strong className="text-fg-muted">Notarization Note:</strong> Prerelease alpha is not notarized yet — you may need to right-click to open or allow it in macOS Privacy & Security after launching.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Security & Costs:</strong> Zero provider API integrations or hidden telemetry. Uses only your own local AI CLIs (Claude, Codex, Cursor CLIs). No account required and no API billing.
+                  <strong className="text-fg-muted">Security & Costs:</strong> Zero provider API integrations or hidden telemetry. Uses only your own local AI CLIs. No account required and no API billing.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. To guarantee safety, AndSpace has no Git write actions, no built-in editor (code editing remains in your local IDE), and no embedded browser previews.
+                  <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. No Git write actions, no built-in editor, and no embedded browser preview.
                 </div>
                 <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
                   <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
@@ -73,6 +74,14 @@ export function FinalCTA() {
                   ZIP: 30ee2906e5a5c9891e1a90133aeb6799e323fad5ab99d8104f7e1ac2737da333
                   <br />
                   DMG: 4eb5f491c771a235c03607efa8d62e7739e5133d5a4fbf6588fcb0ee945670e2
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1.5 text-[12px]">
+                  <Link href="/security" className="text-violet-300 hover:text-violet-200">
+                    Security notes
+                  </Link>
+                  <Link href="/privacy" className="text-violet-300 hover:text-violet-200">
+                    Privacy policy
+                  </Link>
                 </div>
               </div>
             </details>
