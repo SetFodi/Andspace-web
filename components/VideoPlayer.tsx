@@ -156,7 +156,9 @@ export function VideoPlayer({
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    const onLoaded = () => setDuration(v.duration || 0);
+    const onLoaded = () => {
+      if (Number.isFinite(v.duration) && v.duration > 0) setDuration(v.duration);
+    };
     const onTime = () => setCurrent(v.currentTime);
     const onPlay = () => {
       setPlaying(true);
@@ -185,6 +187,17 @@ export function VideoPlayer({
     v.addEventListener("playing", onPlaying);
     v.addEventListener("volumechange", onVol);
     v.addEventListener("progress", onProgress);
+
+    // Metadata / playback can become ready before this effect attaches its
+    // listeners (fast or cached loads), in which case the events above already
+    // fired and were missed. Sync current state once up front so duration,
+    // time, volume and play-state are never stuck at their initial values.
+    onLoaded();
+    onTime();
+    onVol();
+    onProgress();
+    if (!v.paused) onPlay();
+
     return () => {
       v.removeEventListener("loadedmetadata", onLoaded);
       v.removeEventListener("durationchange", onLoaded);
@@ -238,24 +251,27 @@ export function VideoPlayer({
   }, [playing]);
 
   /* ---- scrubber ---- */
-  const seekToClientX = useCallback(
-    (clientX: number) => {
-      const t = trackRef.current;
-      const v = videoRef.current;
-      if (!t || !v || !duration) return;
-      const rect = t.getBoundingClientRect();
-      const frac = clamp01((clientX - rect.left) / rect.width);
-      v.currentTime = frac * duration;
-      setCurrent(frac * duration);
-    },
-    [duration]
-  );
+  const seekToClientX = useCallback((clientX: number) => {
+    const t = trackRef.current;
+    const v = videoRef.current;
+    if (!t || !v) return;
+    const dur = v.duration;
+    if (!Number.isFinite(dur) || dur <= 0) return;
+    const rect = t.getBoundingClientRect();
+    const frac = clamp01((clientX - rect.left) / rect.width);
+    v.currentTime = frac * dur;
+    setCurrent(frac * dur);
+  }, []);
 
   const onTrackDown = (e: ReactPointerEvent) => {
     e.preventDefault();
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
     setScrubbing(true);
     seekToClientX(e.clientX);
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {
+      /* capture is best-effort; the seek already happened */
+    }
   };
   const onTrackMove = (e: ReactPointerEvent) => {
     const t = trackRef.current;
@@ -283,8 +299,12 @@ export function VideoPlayer({
   }, []);
   const onVolDown = (e: ReactPointerEvent) => {
     e.preventDefault();
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
     setVolFromClientX(e.clientX);
+    try {
+      (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    } catch {
+      /* capture is best-effort */
+    }
   };
   const onVolMove = (e: ReactPointerEvent) => {
     if (e.buttons === 1) setVolFromClientX(e.clientX);
@@ -310,7 +330,10 @@ export function VideoPlayer({
         break;
       case "ArrowRight":
         e.preventDefault();
-        v.currentTime = Math.min(duration, v.currentTime + 5);
+        v.currentTime = Math.min(
+          Number.isFinite(v.duration) ? v.duration : Infinity,
+          v.currentTime + 5
+        );
         wake();
         break;
       case "ArrowLeft":
