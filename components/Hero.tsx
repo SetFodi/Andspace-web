@@ -101,8 +101,8 @@ export function Hero() {
           <ScreenshotFrame
             src="/app-hero.png"
             alt="AndSpace terminal with project sidebar, split panes running bun dev, and a command palette open"
-            width={2047}
-            height={1283}
+            width={3164}
+            height={2070}
             priority
             glow="lg"
             sizes="(max-width: 1280px) 100vw, 1280px"

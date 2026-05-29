@@ -23,8 +23,8 @@ export function CommandPaletteSection() {
         <ShowcaseShot
           src="/d3879092-96e8-422f-a1d0-87e3b7499c60.png"
           alt="AndSpace command palette open over a split-pane terminal, listing workflow actions like New Tab, Split Right, Toggle Sidebar, and Run Script"
-          width={1672}
-          height={941}
+          width={3164}
+          height={2070}
           priority
           glow="md"
           sizes="(max-width: 1280px) 100vw, 640px"
