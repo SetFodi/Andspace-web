@@ -6,6 +6,7 @@ import { ArrowRightIcon, AppleIcon, PlayIcon } from "./icons";
 const DEMO_STEPS = [
   "Restore a split workspace",
   "Run a dev server",
+  "Preview localhost in AndSpace",
   "Open the command palette",
   "Catch a risky command",
   "Send context to a local AI CLI",
@@ -23,8 +24,8 @@ export function DemoSection() {
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-fg-muted">
             A short alpha walkthrough: restored workspace, local server
-            detection, command palette, Command Guard, AI handoff, and
-            read-only Git diff preview.
+            detection, Local Preview, command palette, Command Guard, AI
+            handoff, and read-only Git diff preview.
           </p>
 
           <div className="mt-7 space-y-2.5">
@@ -47,7 +48,7 @@ export function DemoSection() {
               Open video
             </Button>
             <Button
-              href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5"
+              href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.6"
               variant="ghost"
             >
               <AppleIcon className="h-4 w-4" />

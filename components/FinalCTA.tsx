@@ -28,7 +28,7 @@ export function FinalCTA() {
 
             <div className="mt-9">
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5" size="lg">
+                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.6" size="lg">
                   <AppleIcon className="h-4 w-4" />
                   Download for macOS
                 </Button>
@@ -38,7 +38,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-                AndSpace v0.1.0-alpha.5 is now available for macOS.
+                AndSpace v0.1.0-alpha.6 is now available for macOS.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export function FinalCTA() {
                 <LockIcon className="h-3.5 w-3.5" /> Runs entirely on your machine
               </span>
               <span>macOS 13+ · Apple Silicon</span>
-              <span>v0.1.0-alpha.5</span>
+              <span>v0.1.0-alpha.6</span>
             </div>
 
             {/* Spec limits, installation guardrails, and checksum accordion */}
@@ -66,14 +66,14 @@ export function FinalCTA() {
                   <strong className="text-fg-muted">Security & Costs:</strong> Zero provider API integrations or hidden telemetry. Uses only your own local AI CLIs. No account required and no API billing.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. No Git write actions, no built-in editor, and no embedded browser preview.
+                  <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. Local Preview is limited to localhost/private-LAN URLs. No Git write actions and no built-in editor.
                 </div>
                 <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
                   <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
                   <br />
-                  ZIP: 30ee2906e5a5c9891e1a90133aeb6799e323fad5ab99d8104f7e1ac2737da333
+                  ZIP: 317afd38c3c19ce1c6cd7ba74e74f8677f16564c5c250ebaa06786e9bd3a7d9f
                   <br />
-                  DMG: 4eb5f491c771a235c03607efa8d62e7739e5133d5a4fbf6588fcb0ee945670e2
+                  DMG: f6dc8458b81a73d6aa759bec24af9ded231a81b1f84c09b28750892d8d020f5c
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1.5 text-[12px]">
                   <Link href="/security" className="text-violet-300 hover:text-violet-200">

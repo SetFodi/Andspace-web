@@ -15,7 +15,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Resources",
     links: [
-      { label: "Release", href: "https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5" },
+      { label: "Release", href: "https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.6" },
       { label: "Changelog", href: "https://github.com/SetFodi/Andspace/releases" },
       { label: "Documentation", href: "https://github.com/SetFodi/Andspace#readme" },
       { label: "Keyboard shortcuts", href: "/#keyboard" },
