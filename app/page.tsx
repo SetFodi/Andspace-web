@@ -1,6 +1,7 @@
 import { ScrollAnchors } from "@/components/ScrollAnchors";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
+import { DemoSection } from "@/components/DemoSection";
 import { Features } from "@/components/Features";
 import { CommandGuardSection } from "@/components/CommandGuardSection";
 import { AIHandoffSection } from "@/components/AIHandoffSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <div id="site-scroll">
         <main className="relative">
           <Hero />
+          <DemoSection />
           <Features />
           <CommandGuardSection />
           <AIHandoffSection />

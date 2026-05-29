@@ -71,7 +71,7 @@ export function Hero() {
               </Button>
               <Button href="#demo" variant="ghost" size="lg">
                 <PlayIcon className="h-3.5 w-3.5" />
-                Watch Demo
+                View Demo Flow
               </Button>
             </div>
             <p className="mt-3 text-[12.5px] font-medium text-violet-400">
