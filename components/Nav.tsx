@@ -1,14 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 import { AppleIcon, GithubIcon } from "./icons";
 
 const LINKS = [
-  { label: "Features", href: "#features" },
-  { label: "Command Guard", href: "#command-guard" },
-  { label: "AI Handoff", href: "#ai-handoff" },
-  { label: "Sidebar", href: "#sidebar" },
-  { label: "Changelog", href: "#changelog" },
-];
+  { label: "Features", href: "#features", id: "features" },
+  { label: "Command Guard", href: "#command-guard", id: "command-guard" },
+  { label: "AI Handoff", href: "#ai-handoff", id: "ai-handoff" },
+  { label: "Sidebar", href: "#sidebar", id: "sidebar" },
+] as const;
+
+const RELEASES_URL = "https://github.com/SetFodi/Andspace/releases";
 
 export function Wordmark() {
   return (
@@ -29,23 +34,91 @@ export function Wordmark() {
 }
 
 export function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  // Solidify the bar once the page leaves the very top so it floats cleanly
+  // over the hero mesh, then frosts as soon as content scrolls beneath it.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Scroll-spy: highlight the nav link for whichever section is currently
+  // sitting just below the bar. The band (-20% top, -70% bottom) keeps a
+  // single section active through most of its scroll travel.
+  useEffect(() => {
+    const sections = LINKS.map((l) => document.getElementById(l.id)).filter(
+      (el): el is HTMLElement => el !== null
+    );
+    if (sections.length === 0) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort(
+            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+          );
+        if (visible[0]) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => obs.observe(s));
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="border-b border-line-soft bg-ink-900/92">
+      <div
+        className={cn(
+          "transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300",
+          scrolled
+            ? "border-b border-line-strong bg-ink-950/80 shadow-[0_14px_36px_-24px_rgba(0,0,0,0.95)] backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent"
+        )}
+      >
         <nav className="mx-auto flex h-16 w-full max-w-page items-center justify-between px-6 lg:px-8">
           <div className="flex items-center gap-8">
             <Wordmark />
             <ul className="hidden items-center gap-1 lg:flex">
-              {LINKS.map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="rounded-lg px-3 py-1.5 text-[13.5px] font-medium text-fg-muted transition-colors hover:text-fg"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+              {LINKS.map((l) => {
+                const active = activeId === l.id;
+                return (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      aria-current={active ? "true" : undefined}
+                      className={cn(
+                        "relative rounded-lg px-3 py-1.5 text-[13.5px] font-medium transition-colors",
+                        active ? "text-fg" : "text-fg-muted hover:text-fg"
+                      )}
+                    >
+                      {l.label}
+                      <span
+                        aria-hidden
+                        className={cn(
+                          "absolute inset-x-3 -bottom-0.5 h-px origin-center bg-gradient-to-r from-transparent via-violet-400 to-transparent transition-transform duration-300",
+                          active ? "scale-x-100" : "scale-x-0"
+                        )}
+                      />
+                    </Link>
+                  </li>
+                );
+              })}
+              <li>
+                <Link
+                  href={RELEASES_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg px-3 py-1.5 text-[13.5px] font-medium text-fg-muted transition-colors hover:text-fg"
+                >
+                  Changelog
+                </Link>
+              </li>
             </ul>
           </div>
 

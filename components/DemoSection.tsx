@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { Section, Eyebrow, Kbd, Button } from "./ui";
+import { VideoPlayer } from "./VideoPlayer";
 import { ArrowRightIcon, AppleIcon, PlayIcon } from "./icons";
 
 const DEMO_STEPS = [
@@ -45,9 +46,12 @@ export function DemoSection() {
               <PlayIcon className="h-4 w-4" />
               Open video
             </Button>
-            <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5">
+            <Button
+              href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5"
+              variant="ghost"
+            >
               <AppleIcon className="h-4 w-4" />
-              Download alpha
+              Download for macOS
             </Button>
             <span className="inline-flex items-center gap-2 text-[13px] text-fg-faint">
               <Kbd>⌘</Kbd>
@@ -65,21 +69,11 @@ export function DemoSection() {
               className="glow-violet-frame-md pointer-events-none absolute left-1/2 top-0 -z-10 h-56 w-4/5 -translate-x-1/2 opacity-70"
             />
             <div className="rounded-2xl bg-gradient-to-b from-white/[0.14] via-white/[0.05] to-white/[0.02] p-px shadow-[0_40px_120px_-40px_rgba(0,0,0,0.95)]">
-              <div className="relative overflow-hidden rounded-[15px] bg-ink-900">
-                <video
-                  src="/andspace.mp4"
-                  poster="/app-hero.png"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="aspect-video w-full bg-ink-950 object-cover"
-                  aria-label="AndSpace alpha demo video"
-                />
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
-                />
-              </div>
+              <VideoPlayer
+                src="/andspace.mp4"
+                poster="/app-hero.png"
+                label="AndSpace alpha demo video"
+              />
             </div>
             <div
               aria-hidden

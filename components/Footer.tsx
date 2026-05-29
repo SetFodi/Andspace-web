@@ -15,18 +15,18 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Resources",
     links: [
-      { label: "Changelog", href: "#changelog" },
-      { label: "Documentation", href: "#" },
-      { label: "Keyboard shortcuts", href: "#" },
+      { label: "Changelog", href: "https://github.com/SetFodi/Andspace/releases" },
+      { label: "Documentation", href: "https://github.com/SetFodi/Andspace#readme" },
+      { label: "Keyboard shortcuts", href: "#keyboard" },
       { label: "GitHub", href: "https://github.com/SetFodi/Andspace" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#" },
-      { label: "Privacy", href: "#" },
-      { label: "Contact", href: "#" },
+      { label: "About", href: "#features" },
+      { label: "Privacy", href: "#download" },
+      { label: "Contact", href: "https://github.com/SetFodi/Andspace/issues" },
     ],
   },
 ];

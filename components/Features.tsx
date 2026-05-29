@@ -23,14 +23,14 @@ function Bento({
   return (
     <div
       className={cn(
-        "relative rounded-[20px] bg-gradient-to-b from-white/[0.09] to-white/[0.015] p-px",
+        "group relative rounded-[20px] bg-gradient-to-b from-white/[0.09] to-white/[0.015] p-px transition-[transform,background,box-shadow] duration-300 hover:-translate-y-0.5 hover:from-violet/40 hover:to-white/[0.05] hover:shadow-[0_24px_60px_-30px_rgba(124,58,237,0.5)]",
         className
       )}
     >
       <div className="relative flex h-full flex-col overflow-hidden rounded-[19px] bg-gradient-to-b from-ink-800 to-ink-850">
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(167,139,250,0.14)_0%,transparent_72%)] opacity-0"
+          className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(167,139,250,0.16)_0%,transparent_72%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         />
         {children}
       </div>
