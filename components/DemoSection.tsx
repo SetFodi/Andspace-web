@@ -1,7 +1,6 @@
-import { ScreenshotFrame } from "./ScreenshotFrame";
 import { Reveal } from "./Reveal";
 import { Section, Eyebrow, Kbd, Button } from "./ui";
-import { PlayIcon, ArrowRightIcon, AppleIcon } from "./icons";
+import { ArrowRightIcon, AppleIcon, PlayIcon } from "./icons";
 
 const DEMO_STEPS = [
   "Restore a split workspace",
@@ -19,12 +18,12 @@ export function DemoSection() {
         <Reveal>
           <Eyebrow>Demo flow</Eyebrow>
           <h2 className="text-balance text-[clamp(1.9rem,3.8vw,2.8rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-fg">
-            A 45-second pass through the real app.
+            Watch AndSpace in motion.
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-fg-muted">
-            The alpha demo is intentionally direct: open a project, run a local
-            server, use keyboard-first workflow actions, and inspect changes
-            without leaving the terminal.
+            A short alpha walkthrough: restored workspace, local server
+            detection, command palette, Command Guard, AI handoff, and
+            read-only Git diff preview.
           </p>
 
           <div className="mt-7 space-y-2.5">
@@ -42,6 +41,10 @@ export function DemoSection() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Button href="/andspace.mp4">
+              <PlayIcon className="h-4 w-4" />
+              Open video
+            </Button>
             <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5">
               <AppleIcon className="h-4 w-4" />
               Download alpha
@@ -56,23 +59,33 @@ export function DemoSection() {
         </Reveal>
 
         <Reveal delay={100} effect="screenshot">
-          <ScreenshotFrame
-            src="/app-hero.png"
-            alt="AndSpace demo flow screenshot showing a restored workspace with sidebar and split terminal panes"
-            width={3164}
-            height={2070}
-            glow="md"
-            sizes="(max-width: 1024px) 100vw, 680px"
-          >
-            <div className="absolute inset-0 grid place-items-center bg-ink-950/45">
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-ink-900/80 px-5 py-3 text-sm font-semibold text-fg shadow-[0_20px_80px_-24px_rgba(0,0,0,0.9)] backdrop-blur">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-violet text-white shadow-[0_0_24px_rgba(139,92,246,0.5)]">
-                  <PlayIcon className="ml-0.5 h-4 w-4" />
-                </span>
-                Demo video flow
+          <div className="relative">
+            <div
+              aria-hidden
+              className="glow-violet-frame-md pointer-events-none absolute left-1/2 top-0 -z-10 h-56 w-4/5 -translate-x-1/2 opacity-70"
+            />
+            <div className="rounded-2xl bg-gradient-to-b from-white/[0.14] via-white/[0.05] to-white/[0.02] p-px shadow-[0_40px_120px_-40px_rgba(0,0,0,0.95)]">
+              <div className="relative overflow-hidden rounded-[15px] bg-ink-900">
+                <video
+                  src="/andspace.mp4"
+                  poster="/app-hero.png"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="aspect-video w-full bg-ink-950 object-cover"
+                  aria-label="AndSpace alpha demo video"
+                />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
+                />
               </div>
             </div>
-          </ScreenshotFrame>
+            <div
+              aria-hidden
+              className="glow-floor pointer-events-none absolute inset-x-8 -bottom-6 -z-10 h-12"
+            />
+          </div>
         </Reveal>
       </div>
     </Section>
