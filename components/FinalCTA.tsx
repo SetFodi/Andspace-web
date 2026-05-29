@@ -27,7 +27,7 @@ export function FinalCTA() {
 
             <div className="mt-9">
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.4" size="lg">
+                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.5" size="lg">
                   <AppleIcon className="h-4 w-4" />
                   Download for macOS
                 </Button>
@@ -37,7 +37,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-                AndSpace v0.1.0-alpha.4 is now available for macOS.
+                AndSpace v0.1.0-alpha.5 is now available for macOS.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ export function FinalCTA() {
                 <LockIcon className="h-3.5 w-3.5" /> Runs entirely on your machine
               </span>
               <span>macOS 13+ · Apple Silicon</span>
-              <span>v0.1.0-alpha.4</span>
+              <span>v0.1.0-alpha.5</span>
             </div>
 
             {/* Spec limits, installation guardrails, and Checksum accordion */}
