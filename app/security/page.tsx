@@ -32,8 +32,8 @@ export default function SecurityPage() {
         {
           title: "Download verification",
           body: [
-            "For v0.1.0-alpha.6, verify the ZIP with: shasum -a 256 AndSpace-v0.1.0-alpha.6-macos.zip. Expected checksum: 317afd38c3c19ce1c6cd7ba74e74f8677f16564c5c250ebaa06786e9bd3a7d9f.",
-            "Verify the DMG with: shasum -a 256 AndSpace_0.1.0-alpha.6_aarch64.dmg. Expected checksum: f6dc8458b81a73d6aa759bec24af9ded231a81b1f84c09b28750892d8d020f5c.",
+            "For v0.1.0-alpha.7, verify the ZIP with: shasum -a 256 AndSpace-v0.1.0-alpha.7-macos.zip. Expected checksum: 2a76eb64f3e56702c22a382c692cb7a59f6c30d4d32cdcb32c2352295fa6bb4e.",
+            "Verify the DMG with: shasum -a 256 AndSpace_0.1.0-alpha.7_aarch64.dmg. Expected checksum: f3a05ea81c67a5961f8e2f4f29774468e5a7bb4035f34e2f2bf2528cd32e9d2c.",
           ],
         },
         {

@@ -40,7 +40,7 @@ export function Hero() {
         <Reveal>
           <Pill className="shadow-[0_0_30px_-8px_rgba(124,58,237,0.6)]">
             <span className="h-1.5 w-1.5 rounded-full bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.9)]" />
-            v0.1.0-alpha.6 — now for Apple Silicon
+            v0.1.0-alpha.7 — now for Apple Silicon
           </Pill>
         </Reveal>
 
@@ -65,7 +65,7 @@ export function Hero() {
         <Reveal delay={180}>
           <div>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.6" size="lg">
+              <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.7" size="lg">
                 <AppleIcon className="h-4 w-4" />
                 Download for macOS
               </Button>
@@ -75,7 +75,7 @@ export function Hero() {
               </Button>
             </div>
             <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-              AndSpace v0.1.0-alpha.6 is now available for macOS.
+              AndSpace v0.1.0-alpha.7 is now available for macOS.
             </p>
           </div>
         </Reveal>

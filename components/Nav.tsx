@@ -131,7 +131,7 @@ export function Nav() {
               <GithubIcon />
             </Link>
             <Link
-              href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.6"
+              href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.7"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-violet-400 to-violet-600 px-3.5 py-2 text-[13px] font-semibold text-white shadow-[0_8px_24px_-12px_rgba(124,58,237,0.9),inset_0_1px_0_rgba(255,255,255,0.25)] transition-all hover:from-violet-400 hover:to-violet-500"
             >
               <AppleIcon className="h-4 w-4" />
