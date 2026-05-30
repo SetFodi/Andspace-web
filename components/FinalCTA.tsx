@@ -28,7 +28,7 @@ export function FinalCTA() {
 
             <div className="mt-9">
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.7" size="lg">
+                <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.8" size="lg">
                   <AppleIcon className="h-4 w-4" />
                   Download for macOS
                 </Button>
@@ -38,7 +38,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-                AndSpace v0.1.0-alpha.7 is now available for macOS.
+                AndSpace v0.1.0-alpha.8 is now available for macOS.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export function FinalCTA() {
                 <LockIcon className="h-3.5 w-3.5" /> Runs entirely on your machine
               </span>
               <span>macOS 13+ · Apple Silicon</span>
-              <span>v0.1.0-alpha.7</span>
+              <span>v0.1.0-alpha.8</span>
             </div>
 
             {/* Spec limits, installation guardrails, and checksum accordion */}
@@ -69,14 +69,14 @@ export function FinalCTA() {
                   <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. Local Preview is limited to localhost/private-LAN URLs. No Git write actions and no built-in editor.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Feedback Readiness:</strong> Alpha.7 adds Copy Diagnostics, issue templates, Known Issues, a Homebrew Cask draft, and privacy/security/verification docs polish.
+                  <strong className="text-fg-muted">Shell Setup:</strong> Alpha.8 adds a managed zsh profile for first-run users, existing-shell/custom-shell choices, and optional Homebrew install for recommended shell tools.
                 </div>
                 <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
                   <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
                   <br />
-                  ZIP: 2a76eb64f3e56702c22a382c692cb7a59f6c30d4d32cdcb32c2352295fa6bb4e
+                  ZIP: c0845b48cb6239120d7f42905c4b4f371ed7eba8f8c1c86c704b39b27682d0d5
                   <br />
-                  DMG: f3a05ea81c67a5961f8e2f4f29774468e5a7bb4035f34e2f2bf2528cd32e9d2c
+                  DMG: 650914ed22cb5cfad5ac27287b7f7273cd3438e2cdd96f977c287c85dd7db475
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1.5 text-[12px]">
                   <Link href="/security" className="text-violet-300 hover:text-violet-200">

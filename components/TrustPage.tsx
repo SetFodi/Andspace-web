@@ -41,7 +41,7 @@ export function TrustPage({
             >
               <GithubIcon />
             </Link>
-            <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.7">
+            <Button href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.8">
               <AppleIcon className="h-4 w-4" />
               Download
             </Button>
