@@ -28,7 +28,7 @@ export function FinalCTA() {
 
             <div className="mt-9">
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Button href="https://github.com/SetFodi/Andspace/releases/download/v0.1.0-alpha.8/AndSpace_0.1.0-alpha.8_aarch64.dmg" size="lg">
+                <Button href="https://github.com/SetFodi/Andspace/releases/download/v0.1.0-alpha.9/AndSpace_0.1.0-alpha.9_aarch64.dmg" size="lg">
                   <AppleIcon className="h-4 w-4" />
                   Download for macOS
                 </Button>
@@ -38,7 +38,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-                AndSpace v0.1.0-alpha.8 is now available for macOS.
+                AndSpace v0.1.0-alpha.9 is now available for macOS.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export function FinalCTA() {
                 <LockIcon className="h-3.5 w-3.5" /> Runs entirely on your machine
               </span>
               <span>macOS 13+ · Apple Silicon</span>
-              <span>v0.1.0-alpha.8</span>
+              <span>v0.1.0-alpha.9</span>
             </div>
 
             {/* Spec limits, installation guardrails, and checksum accordion */}
@@ -74,9 +74,9 @@ export function FinalCTA() {
                 <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
                   <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
                   <br />
-                  ZIP: c0845b48cb6239120d7f42905c4b4f371ed7eba8f8c1c86c704b39b27682d0d5
+                  ZIP: d2239e43f897e9dfc98477b3cb8d08cda68b465b229d18ac0d498690a2e94fcc
                   <br />
-                  DMG: 650914ed22cb5cfad5ac27287b7f7273cd3438e2cdd96f977c287c85dd7db475
+                  DMG: 36181540ddd9d39531746a5728bb45b9913942fff43398bc322b86547cc72881
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1.5 text-[12px]">
                   <Link href="/security" className="text-violet-300 hover:text-violet-200">
