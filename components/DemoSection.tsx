@@ -47,10 +47,7 @@ export function DemoSection() {
               <PlayIcon className="h-4 w-4" />
               Open video
             </Button>
-            <Button
-              href="https://github.com/SetFodi/Andspace/releases/download/v0.1.0-alpha.9/AndSpace_0.1.0-alpha.9_aarch64.dmg"
-              variant="ghost"
-            >
+            <Button href="/thanks" variant="ghost">
               <AppleIcon className="h-4 w-4" />
               Download for macOS
             </Button>

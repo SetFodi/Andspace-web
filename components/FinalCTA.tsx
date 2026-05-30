@@ -28,7 +28,7 @@ export function FinalCTA() {
 
             <div className="mt-9">
               <div className="flex flex-wrap items-center justify-center gap-3">
-                <Button href="https://github.com/SetFodi/Andspace/releases/download/v0.1.0-alpha.9/AndSpace_0.1.0-alpha.9_aarch64.dmg" size="lg">
+                <Button href="/thanks" size="lg">
                   <AppleIcon className="h-4 w-4" />
                   Download for macOS
                 </Button>

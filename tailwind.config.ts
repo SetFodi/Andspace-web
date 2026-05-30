@@ -79,10 +79,15 @@ const config: Config = {
           "0%, 100%": { opacity: "0.55" },
           "50%": { opacity: "1" },
         },
+        "dl-shimmer": {
+          "0%": { transform: "translateX(-130%)" },
+          "100%": { transform: "translateX(440%)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s cubic-bezier(0.16,1,0.3,1) both",
         "soft-pulse": "soft-pulse 3.2s ease-in-out infinite",
+        "dl-shimmer": "dl-shimmer 1.5s ease-in-out infinite",
       },
     },
   },
