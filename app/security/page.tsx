@@ -4,7 +4,7 @@ import { TrustPage } from "@/components/TrustPage";
 export const metadata: Metadata = {
   title: "Security Notes — AndSpace",
   description:
-    "Security notes for AndSpace alpha: notarization status, checksum verification, Command Guard limits, and read-only Git behavior.",
+    "Security notes for AndSpace alpha: unsigned install context, checksum verification, Command Guard limits, and read-only Git behavior.",
 };
 
 export default function SecurityPage() {
@@ -16,7 +16,7 @@ export default function SecurityPage() {
       updated="May 29, 2026"
       asideTitle="Current status"
       asideItems={[
-        "Alpha builds are not notarized yet.",
+        "Current alpha builds are unsigned.",
         "Verify ZIP and DMG checksums before sharing.",
         "Git UI is read-only in this version.",
         "Command Guard is a safety rail, not a sandbox.",
@@ -25,7 +25,7 @@ export default function SecurityPage() {
         {
           title: "Unsigned alpha install warning",
           body: [
-            "The current AndSpace public alpha is not signed with a Developer ID certificate and is not notarized by Apple yet. macOS may warn that the app cannot be opened normally after download.",
+            "The current AndSpace public alpha is unsigned prerelease software. macOS may warn that the app cannot be opened normally after download.",
             "This warning is expected for the current prerelease alpha. You may need to right-click the app and choose Open, or allow it from System Settings -> Privacy & Security after the first blocked launch attempt.",
           ],
         },
@@ -54,7 +54,7 @@ export default function SecurityPage() {
           title: "Shell execution",
           body: [
             "AndSpace does not run hidden shell commands beyond user-triggered app behavior such as starting terminal shells, running selected package scripts, opening external editors, loading read-only Git status/diffs, and launching local AI CLIs when requested.",
-            "The app has no auto-update mechanism yet. Future signing, notarization, and update work should be reviewed separately before public rollout.",
+            "The app has no auto-update mechanism yet. Future signing and update work should be reviewed separately before public rollout.",
           ],
         },
         {

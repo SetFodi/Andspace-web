@@ -60,7 +60,7 @@ export function FinalCTA() {
                   <strong className="text-fg-muted">Platform Focus:</strong> Early alpha build. macOS first, Apple Silicon focused, optimized for zsh.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Notarization Note:</strong> Prerelease alpha is not notarized yet — you may need to right-click to open or allow it in macOS Privacy & Security after launching.
+                  <strong className="text-fg-muted">Install Note:</strong> AndSpace is currently an unsigned prerelease alpha — macOS may require right-click -&gt; Open or allow it in Privacy & Security after launching.
                 </div>
                 <div>
                   <strong className="text-fg-muted">Security & Costs:</strong> Zero provider API integrations or hidden telemetry. Uses only your own local AI CLIs. No account required and no API billing.
@@ -81,6 +81,9 @@ export function FinalCTA() {
                   </Link>
                   <Link href="/privacy" className="text-violet-300 hover:text-violet-200">
                     Privacy policy
+                  </Link>
+                  <Link href="https://github.com/SetFodi/Andspace/issues" className="text-violet-300 hover:text-violet-200">
+                    Report an issue
                   </Link>
                 </div>
               </div>

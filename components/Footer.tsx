@@ -18,6 +18,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Release", href: "https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.6" },
       { label: "Changelog", href: "https://github.com/SetFodi/Andspace/releases" },
       { label: "Documentation", href: "https://github.com/SetFodi/Andspace#readme" },
+      { label: "Feedback", href: "https://github.com/SetFodi/Andspace/issues" },
       { label: "Keyboard shortcuts", href: "/#keyboard" },
       { label: "GitHub", href: "https://github.com/SetFodi/Andspace" },
     ],
@@ -28,7 +29,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "About", href: "/#features" },
       { label: "Privacy", href: "/privacy" },
       { label: "Security", href: "/security" },
-      { label: "Contact", href: "https://github.com/SetFodi/Andspace/issues" },
+      { label: "Report issue", href: "https://github.com/SetFodi/Andspace/issues" },
     ],
   },
 ];
@@ -78,6 +79,12 @@ export function Footer() {
             </Link>
             <Link href="/security" className="transition-colors hover:text-fg-muted">
               Security
+            </Link>
+            <Link
+              href="https://github.com/SetFodi/Andspace/issues"
+              className="transition-colors hover:text-fg-muted"
+            >
+              Feedback
             </Link>
             <Link
               href="https://github.com/SetFodi/Andspace"
