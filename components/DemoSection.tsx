@@ -48,7 +48,7 @@ export function DemoSection() {
               Open video
             </Button>
             <Button
-              href="https://github.com/SetFodi/Andspace/releases/tag/v0.1.0-alpha.8"
+              href="https://github.com/SetFodi/Andspace/releases/download/v0.1.0-alpha.8/AndSpace_0.1.0-alpha.8_aarch64.dmg"
               variant="ghost"
             >
               <AppleIcon className="h-4 w-4" />
