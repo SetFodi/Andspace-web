@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RELEASE } from "@/lib/release";
 import { Section, Button } from "./ui";
 import { Reveal } from "./Reveal";
 import { AppleIcon, GithubIcon, LockIcon } from "./icons";
@@ -22,7 +23,7 @@ export function FinalCTA() {
               <span className="text-gradient-violet">place.</span>
             </h2>
             <p className="mx-auto mt-5 max-w-lg text-[15.5px] leading-relaxed text-fg-muted">
-              AndSpace is a free alpha for Apple Silicon. Native, offline-first,
+              AndSpace is a free beta for Apple Silicon. Native, offline-first,
               and quietly fast. No account required.
             </p>
 
@@ -38,7 +39,7 @@ export function FinalCTA() {
                 </Button>
               </div>
               <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-                AndSpace v0.1.0-alpha.9 is now available for macOS.
+                AndSpace v{RELEASE.version} is now available for macOS.
               </p>
             </div>
 
@@ -47,7 +48,7 @@ export function FinalCTA() {
                 <LockIcon className="h-3.5 w-3.5" /> Runs entirely on your machine
               </span>
               <span>macOS 13+ · Apple Silicon</span>
-              <span>v0.1.0-alpha.9</span>
+              <span>v{RELEASE.version}</span>
             </div>
 
             {/* Spec limits, installation guardrails, and checksum accordion */}
@@ -57,10 +58,10 @@ export function FinalCTA() {
               </summary>
               <div className="mt-3 space-y-2.5 text-fg-faint leading-relaxed border-t border-white/[0.06] pt-3">
                 <div>
-                  <strong className="text-fg-muted">Platform Focus:</strong> Early alpha build. macOS first, Apple Silicon focused, optimized for zsh.
+                  <strong className="text-fg-muted">Platform Focus:</strong> Early beta build. macOS first, Apple Silicon focused, optimized for zsh.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Install Note:</strong> AndSpace is currently an unsigned prerelease alpha — macOS may require right-click -&gt; Open or allow it in Privacy & Security after launching.
+                  <strong className="text-fg-muted">Install Note:</strong> AndSpace is currently an unsigned prerelease beta — macOS may require you to allow it in System Settings → Privacy & Security after the first blocked launch.
                 </div>
                 <div>
                   <strong className="text-fg-muted">Security & Costs:</strong> Zero provider API integrations or hidden telemetry. Uses only your own local AI CLIs. No account required and no API billing.
@@ -69,14 +70,18 @@ export function FinalCTA() {
                   <strong className="text-fg-muted">Scope of Control:</strong> Read-only Git changes and visual diff previews. Local Preview is limited to localhost/private-LAN URLs. No Git write actions and no built-in editor.
                 </div>
                 <div>
-                  <strong className="text-fg-muted">Shell Setup:</strong> Alpha.8 adds a managed zsh profile for first-run users, existing-shell/custom-shell choices, and optional Homebrew install for recommended shell tools.
+                  <strong className="text-fg-muted">Shell Setup:</strong> Includes a managed zsh profile for first-run users, existing-shell/custom-shell choices, and optional Homebrew install for recommended shell tools.
                 </div>
-                <div className="pt-2.5 border-t border-white/[0.04] font-mono text-[11px] break-all">
-                  <strong className="font-sans text-[12px] text-fg-muted">SHA-256 Checksums:</strong>
-                  <br />
-                  ZIP: d2239e43f897e9dfc98477b3cb8d08cda68b465b229d18ac0d498690a2e94fcc
-                  <br />
-                  DMG: 36181540ddd9d39531746a5728bb45b9913942fff43398bc322b86547cc72881
+                <div className="pt-2.5 border-t border-white/[0.04]">
+                  <strong className="text-fg-muted">Verify your download:</strong> every{" "}
+                  <Link
+                    href={RELEASE.tagUrl}
+                    className="text-violet-300 hover:text-violet-200"
+                  >
+                    GitHub release
+                  </Link>{" "}
+                  publishes the SHA-256 checksums for its ZIP and DMG — compare
+                  with <code className="font-mono text-[11px]">shasum -a 256 &lt;file&gt;</code>.
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1.5 text-[12px]">
                   <Link href="/security" className="text-violet-300 hover:text-violet-200">

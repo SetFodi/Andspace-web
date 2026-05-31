@@ -1,3 +1,4 @@
+import { RELEASE } from "@/lib/release";
 import { ScreenshotFrame } from "./ScreenshotFrame";
 import { FloatingPalette } from "./FloatingPalette";
 import { HeroMesh } from "./HeroMesh";
@@ -40,7 +41,7 @@ export function Hero() {
         <Reveal>
           <Pill className="shadow-[0_0_30px_-8px_rgba(124,58,237,0.6)]">
             <span className="h-1.5 w-1.5 rounded-full bg-violet-400 shadow-[0_0_8px_rgba(167,139,250,0.9)]" />
-            v0.1.0-alpha.9 — now for Apple Silicon
+            v{RELEASE.version} — now for Apple Silicon
           </Pill>
         </Reveal>
 
@@ -75,7 +76,7 @@ export function Hero() {
               </Button>
             </div>
             <p className="mt-3 text-[12.5px] font-medium text-violet-400">
-              AndSpace v0.1.0-alpha.9 is now available for macOS.
+              AndSpace v{RELEASE.version} is now available for macOS.
             </p>
           </div>
         </Reveal>

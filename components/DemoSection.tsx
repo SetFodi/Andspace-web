@@ -23,7 +23,7 @@ export function DemoSection() {
             Watch AndSpace in motion.
           </h2>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-fg-muted">
-            A short alpha walkthrough: restored workspace, local server
+            A short beta walkthrough: restored workspace, local server
             detection, Local Preview, command palette, Command Guard, AI
             handoff, and read-only Git diff preview.
           </p>
@@ -70,7 +70,7 @@ export function DemoSection() {
               <VideoPlayer
                 src="/andspace.mp4"
                 poster="/app-hero.png"
-                label="AndSpace alpha demo video"
+                label="AndSpace beta demo video"
               />
             </div>
             <div

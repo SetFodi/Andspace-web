@@ -4,36 +4,36 @@ import { TrustPage } from "@/components/TrustPage";
 export const metadata: Metadata = {
   title: "Security Notes — AndSpace",
   description:
-    "Security notes for AndSpace alpha: unsigned install context, checksum verification, Command Guard limits, and read-only Git behavior.",
+    "Security notes for AndSpace beta: unsigned install context, checksum verification, Command Guard limits, and read-only Git behavior.",
 };
 
 export default function SecurityPage() {
   return (
     <TrustPage
       eyebrow="Security"
-      title="Clear limits for an early macOS alpha."
-      intro="AndSpace is designed to make local terminal work safer and more understandable, but it is not a sandbox. These notes explain the current alpha security posture and how to verify downloads."
-      updated="May 29, 2026"
+      title="Clear limits for an early macOS beta."
+      intro="AndSpace is designed to make local terminal work safer and more understandable, but it is not a sandbox. These notes explain the current beta security posture and how to verify downloads."
+      updated="May 31, 2026"
       asideTitle="Current status"
       asideItems={[
-        "Current alpha builds are unsigned.",
+        "Current beta builds are unsigned.",
         "Verify ZIP and DMG checksums before sharing.",
         "Git UI is read-only in this version.",
         "Command Guard is a safety rail, not a sandbox.",
       ]}
       sections={[
         {
-          title: "Unsigned alpha install warning",
+          title: "Unsigned beta install warning",
           body: [
-            "The current AndSpace public alpha is unsigned prerelease software. macOS may warn that the app cannot be opened normally after download.",
-            "This warning is expected for the current prerelease alpha. You may need to right-click the app and choose Open, or allow it from System Settings -> Privacy & Security after the first blocked launch attempt.",
+            "The current AndSpace public beta is unsigned prerelease software. macOS may warn that the app cannot be opened normally after download.",
+            "This warning is expected for the current prerelease beta. Allow it from System Settings -> Privacy & Security -> Open Anyway after the first blocked launch attempt.",
           ],
         },
         {
           title: "Download verification",
           body: [
-            "For v0.1.0-alpha.9, verify the ZIP with: shasum -a 256 AndSpace-v0.1.0-alpha.9-macos.zip. Expected checksum: d2239e43f897e9dfc98477b3cb8d08cda68b465b229d18ac0d498690a2e94fcc.",
-            "Verify the DMG with: shasum -a 256 AndSpace_0.1.0-alpha.9_aarch64.dmg. Expected checksum: 36181540ddd9d39531746a5728bb45b9913942fff43398bc322b86547cc72881.",
+            "Every AndSpace release on GitHub publishes the SHA-256 checksums for its ZIP and DMG. Always download from the official releases page: https://github.com/SetFodi/Andspace/releases.",
+            "After downloading, verify your file with shasum -a 256 <downloaded-file>, then compare the result against the checksums listed on that release's page.",
           ],
         },
         {

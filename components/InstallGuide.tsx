@@ -145,7 +145,7 @@ const STEPS: { title: string; body: ReactNode; visual: ReactNode }[] = [
     body: (
       <>
         Double-click AndSpace. macOS will say it couldn&rsquo;t verify the app &mdash; expected for a
-        notarization-pending alpha. Click <strong className="font-semibold text-fg">Done</strong>.{" "}
+        notarization-pending beta. Click <strong className="font-semibold text-fg">Done</strong>.{" "}
         <span className="font-medium text-rose-300">Don&rsquo;t click &ldquo;Move to Trash.&rdquo;</span>
       </>
     ),
@@ -232,7 +232,7 @@ export function InstallGuide() {
             <span className="text-gradient-violet">AndSpace.</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-[15.5px] leading-relaxed text-fg-muted">
-            Your download is starting now. Because this alpha isn&rsquo;t notarized by Apple yet, macOS asks
+            Your download is starting now. Because this beta isn&rsquo;t notarized by Apple yet, macOS asks
             for your OK the first time you open it &mdash; about 20 seconds. Here&rsquo;s exactly how.
           </p>
         </Reveal>
@@ -336,7 +336,7 @@ export function InstallGuide() {
             <LockIcon className="mt-0.5 h-4 w-4 shrink-0 text-violet-300" />
             <p>
               <strong className="font-semibold text-fg">Why the warning?</strong> AndSpace is an open-source
-              alpha that isn&rsquo;t notarized by Apple yet. The full source is on{" "}
+              beta that isn&rsquo;t notarized by Apple yet. The full source is on{" "}
               <Link href={RELEASE.repoUrl} className="text-violet-300 underline-offset-2 hover:underline">
                 GitHub
               </Link>
