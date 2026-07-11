@@ -15,9 +15,9 @@ export function SidebarSection() {
         </>
       }
       bullets={[
-        "Files, scripts, and live servers for the folder you're in",
-        "Open any file in Cursor, VS Code, or a Neovim split",
-        "Read-only Git changes & visual diff previews directly in the sidebar",
+        "nvim-style file tree with colored glyphs for the folder you're in",
+        "Open any file in Cursor, VS Code, Neovim — or view images in the terminal",
+        "Scripts, live servers, and read-only Git changes in one sidebar",
       ]}
       visual={
         <ScreenshotFrame
@@ -37,8 +37,9 @@ export function SidebarSection() {
         <span className="font-mono text-violet-400">package.json</span>, currently running dev servers, and your project&apos;s read-only Git changes.
       </p>
       <p>
-        Press a file for instant actions: open it in your editor of choice, copy
-        its path, or inspect read-only diff previews in an overlay — without ever leaving home row.
+        Press a file for instant actions: open it in your editor of choice, view
+        PNG/JPEG/GIF inline in the terminal, copy its path, or inspect read-only
+        diffs — without leaving home row.
       </p>
     </Spotlight>
   );
