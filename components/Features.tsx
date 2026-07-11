@@ -184,8 +184,8 @@ export function Features() {
           <Bento className="h-full">
             <div className="flex h-full flex-col p-6">
               <Head icon={<SidebarIcon />} title="Project sidebar">
-                Files, scripts, and live servers for the folder you&apos;re in —
-                one keystroke away, never in your way.
+                nvim-style file tree, scripts, and live servers for the folder
+                you&apos;re in — one keystroke away, never in your way.
               </Head>
               <Panel className="mt-auto p-3 text-fg-muted">
                 <div className="text-[9.5px] font-semibold uppercase tracking-wider text-fg-faint">
